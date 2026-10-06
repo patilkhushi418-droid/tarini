@@ -1,0 +1,98 @@
+[
+    {
+        "id": "PUNE-001",
+        "name": "Cyber Crime Police Station, Pune City",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "address": "Pune City Police Headquarters, Shivaji Nagar, Pune - 411005",
+        "phone": "02029710097",
+        "displayPhone": "020 2971 0097",
+        "email": "crimecyber.pune@nic.in",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+    },
+    {
+        "id": "MUMBAI-001",
+        "name": "Cyber Crime Police Station, Mumbai",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "address": "BKC Police Station Complex, Mumbai, Maharashtra",
+        "phone": "02226504008",
+        "displayPhone": "022 2650 4008",
+        "email": "cybercell.mumbai@mahapolice.gov.in",
+        "latitude": 19.0760,
+        "longitude": 72.8777
+    },
+    {
+        "id": "NAVI-MUMBAI-001",
+        "name": "Cyber Police Station, Navi Mumbai",
+        "city": "Navi Mumbai",
+        "state": "Maharashtra",
+        "address": "Sawali Building, 1st Floor, Sector-5, Near Dr. D.Y. Patil Hospital, Nerul, Navi Mumbai - 400706",
+        "phone": "9321599806",
+        "displayPhone": "+91 93215 99806",
+        "email": "cybercell.navimumbai@mahapolice.gov.in",
+        "latitude": 19.0330,
+        "longitude": 73.0297
+    },
+    {
+        "id": "THANE-001",
+        "name": "Cyber Crime Investigation Cell, Thane",
+        "city": "Thane",
+        "state": "Maharashtra",
+        "address": "Office of Commissioner of Police, Near Kalwa Bridge, Thane West - 400601",
+        "phone": "02225429804",
+        "displayPhone": "022 2542 9804",
+        "email": "",
+        "latitude": 19.2183,
+        "longitude": 72.9781
+    },
+    {
+        "id": "NAGPUR-001",
+        "name": "Cyber Crime Cell, Nagpur City",
+        "city": "Nagpur",
+        "state": "Maharashtra",
+        "address": "Crime Branch, New Administrative Building, Civil Lines, Nagpur - 440001",
+        "phone": "07122566766",
+        "displayPhone": "0712 256 6766",
+        "email": "",
+        "latitude": 21.1458,
+        "longitude": 79.0882
+    },
+    {
+        "id": "NASHIK-001",
+        "name": "Cyber Police Station, Nashik City",
+        "city": "Nashik",
+        "state": "Maharashtra",
+        "address": "Behind Office of Commissioner of Police, Gangapur Road, Nashik - 422009",
+        "phone": "02532305226",
+        "displayPhone": "0253 230 5226",
+        "email": "cyberpscp.nashik@mahapolice.gov.in",
+        "latitude": 20.0059,
+        "longitude": 73.7797
+    },
+    {
+        "id": "BENGALURU-001",
+        "name": "Cyber Crime Police Station, Bengaluru",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "address": "Bengaluru City Police Commissionerate, Bengaluru, Karnataka",
+        "phone": "1930",
+        "displayPhone": "1930",
+        "email": "",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+    },
+    {
+        "id": "HYDERABAD-001",
+        "name": "Cyber Crime Police Station, Hyderabad",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "address": "Hyderabad City Police Commissionerate, Hyderabad, Telangana",
+        "phone": "1930",
+        "displayPhone": "1930",
+        "email": "",
+        "latitude": 17.3850,
+        "longitude": 78.4867
+    }
+]

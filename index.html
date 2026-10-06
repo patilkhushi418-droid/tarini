@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tarini | Cyber Safety Support</title>
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Leaflet Map CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-inner">
+
+            <a
+                href="#top"
+                class="logo"
+            >
+
+                <span class="logo-box">
+                    T
+                </span>
+
+                <span>
+                    Tarini
+                </span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="#find-help">
+                    Find Help
+                </a>
+
+                <a href="#emergency">
+                    Emergency
+                </a>
+
+                <a href="#situations">
+                    Safety Guide
+                </a>
+
+                <a href="#chatbot">
+                    Chatbot
+                </a>
+
+                <a
+                    href="#report"
+                    class="nav-help-button"
+                >
+                    Need help now?
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main id="top">
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="section-label">
+                        CYBER SAFETY SUPPORT
+                    </span>
+
+                    <h1>
+                        You don't have to
+                        <span>handle it alone.</span>
+                    </h1>
+
+                    <p>
+                        Tarini helps women understand what to do
+                        when something goes wrong online — from
+                        blackmail and fake profiles to photo misuse,
+                        harassment and threats.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#find-help"
+                            class="btn btn-primary"
+                        >
+                            Find Help Near Me
+                        </a>
+
+                        <a
+                            href="#situations"
+                            class="btn btn-secondary"
+                        >
+                            See Safety Guide
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="hero-card-top">
+
+                        <span class="status-dot"></span>
+
+                        <span>
+                            You are not alone
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Start with one safe step.
+                    </h3>
+
+                    <p>
+                        Preserve what happened, understand your
+                        options and find the right support.
+                    </p>
+
+                    <div class="hero-line"></div>
+
+                    <div class="hero-mini-row">
+
+                        <span>
+                            Evidence
+                        </span>
+
+                        <span>
+                            Support
+                        </span>
+
+                        <span>
+                            Action
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FIND CYBER CELL
+        ====================================================== -->
+
+        <section
+            id="find-help"
+            class="section find-help-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        LOCAL SUPPORT
+                    </span>
+
+                    <h2>
+                        Find the nearest cyber crime cell.
+                    </h2>
+
+                    <p>
+                        Allow location access and Tarini will find
+                        the closest available cyber crime support
+                        centre to you.
+                    </p>
+
+                </div>
+
+
+                <!-- LOCATION BUTTON -->
+
+                <div class="location-panel">
+
+                    <div class="location-content">
+
+                        <div class="location-icon">
+                            ◎
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Find my nearest cyber cell
+                            </h3>
+
+                            <p id="locationStatus">
+                                Click the button to find the nearest
+                                cyber crime cell.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="findLocationButton"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="findMyLocation()"
+                    >
+                        Find My Location
+                    </button>
+
+                </div>
+
+
+                <!-- ONLY NEAREST CELL APPEARS HERE -->
+
+                <div
+                    id="nearestCell"
+                    class="nearest-cell"
+                    style="display: none;"
+                ></div>
+
+
+                <!-- MAP -->
+
+                <div
+                    id="mapContainer"
+                    class="map-container"
+                    style="display: none;"
+                >
+
+                    <div class="map-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                YOUR ROUTE
+                            </span>
+
+                            <h3>
+                                Route to the nearest cyber cell
+                            </h3>
+
+                        </div>
+
+                        <div
+                            id="routeDistance"
+                            class="route-distance"
+                        >
+                            Calculating...
+                        </div>
+
+                    </div>
+
+
+                    <div id="cyberMap"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EMERGENCY CONTACTS
+        ====================================================== -->
+
+        <section
+            id="emergency"
+            class="section emergency-section"
+        >
+
+            <div class="container">
+
+                <div class="emergency-heading">
+
+                    <div>
+
+                        <span class="section-label red-label">
+                            NEED HELP NOW?
+                        </span>
+
+                        <h2>
+                            Important numbers to keep handy.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        If you feel unsafe or need immediate
+                        assistance, use the appropriate emergency
+                        service.
+                    </p>
+
+                </div>
+
+
+                <div class="emergency-grid">
+
+
+                    <a
+                        href="tel:1930"
+                        class="emergency-card cyber"
+                    >
+
+                        <div class="emergency-number">
+                            1930
+                        </div>
+
+                        <h3>
+                            Cyber Crime Helpline
+                        </h3>
+
+                        <p>
+                            For reporting cybercrime and financial
+                            cyber fraud.
+                        </p>
+
+                        <span>
+                            Call 1930 →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="tel:181"
+                        class="emergency-card women"
+                    >
+
+                        <div class="emergency-number">
+                            181
+                        </div>
+
+                        <h3>
+                            Women Helpline
+                        </h3>
+
+                        <p>
+                            Support and assistance for women facing
+                            difficult situations.
+                        </p>
+
+                        <span>
+                            Call 181 →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="tel:112"
+                        class="emergency-card emergency"
+                    >
+
+                        <div class="emergency-number">
+                            112
+                        </div>
+
+                        <h3>
+                            Emergency
+                        </h3>
+
+                        <p>
+                            Use this number if you are in immediate
+                            danger or need urgent help.
+                        </p>
+
+                        <span>
+                            Call 112 →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SITUATIONS / SAFETY GUIDE
+        ====================================================== -->
+
+        <section
+            id="situations"
+            class="section situations-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        SAFETY GUIDE
+                    </span>
+
+                    <h2>
+                        If this is happening to you...
+                    </h2>
+
+                    <p>
+                        Here are some immediate things you can do.
+                        You do not need to open the chatbot to use
+                        these steps.
+                    </p>
+
+                </div>
+
+
+                <div class="situations-grid">
+
+
+                    <!-- BLACKMAIL -->
+
+                    <article class="situation-card red-card">
+
+                        <div class="situation-number">
+                            01
+                        </div>
+
+                        <div class="situation-icon">
+                            !
+                        </div>
+
+                        <h3>
+                            Someone is blackmailing me
+                        </h3>
+
+                        <p class="situation-intro">
+                            Someone is threatening to share your
+                            photos, videos or personal information.
+                        </p>
+
+                        <div class="situation-divider"></div>
+
+                        <h4>
+                            Do this first
+                        </h4>
+
+                        <ul>
+
+                            <li>
+                                Take screenshots of the threatening
+                                messages.
+                            </li>
+
+                            <li>
+                                Save the text, username, phone number
+                                and profile URL.
+                            </li>
+
+                            <li>
+                                If they have a photo or video,
+                                save the evidence and do not delete
+                                the chat.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- PHOTO MISUSE -->
+
+                    <article class="situation-card purple-card">
+
+                        <div class="situation-number">
+                            02
+                        </div>
+
+                        <div class="situation-icon">
+                            ◇
+                        </div>
+
+                        <h3>
+                            My photo is being misused
+                        </h3>
+
+                        <p class="situation-intro">
+                            Your photo may have been edited,
+                            morphed, AI-generated or shared without
+                            your permission.
+                        </p>
+
+                        <div class="situation-divider"></div>
+
+                        <h4>
+                            Do this first
+                        </h4>
+
+                        <ul>
+
+                            <li>
+                                Screenshot the post, profile or
+                                message.
+                            </li>
+
+                            <li>
+                                Save the profile username and URL.
+                            </li>
+
+                            <li>
+                                Keep the original photo if you have
+                                it and report the content.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- FAKE PROFILE -->
+
+                    <article class="situation-card orange-card">
+
+                        <div class="situation-number">
+                            03
+                        </div>
+
+                        <div class="situation-icon">
+                            @
+                        </div>
+
+                        <h3>
+                            Someone made a fake profile
+                        </h3>
+
+                        <p class="situation-intro">
+                            Someone is using your name, photos or
+                            identity to create a fake account.
+                        </p>
+
+                        <div class="situation-divider"></div>
+
+                        <h4>
+                            Do this first
+                        </h4>
+
+                        <ul>
+
+                            <li>
+                                Take screenshots of the fake profile.
+                            </li>
+
+                            <li>
+                                Copy and save the profile URL and
+                                username.
+                            </li>
+
+                            <li>
+                                Report the account for impersonation
+                                and keep the evidence.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- HARASSMENT -->
+
+                    <article class="situation-card dark-red-card">
+
+                        <div class="situation-number">
+                            04
+                        </div>
+
+                        <div class="situation-icon">
+                            !
+                        </div>
+
+                        <h3>
+                            I'm being harassed or threatened
+                        </h3>
+
+                        <p class="situation-intro">
+                            You are receiving unwanted messages,
+                            threats, abuse or repeated contact.
+                        </p>
+
+                        <div class="situation-divider"></div>
+
+                        <h4>
+                            Do this first
+                        </h4>
+
+                        <ul>
+
+                            <li>
+                                Save screenshots of messages and
+                                missed calls.
+                            </li>
+
+                            <li>
+                                Keep usernames, phone numbers and
+                                dates as evidence.
+                            </li>
+
+                            <li>
+                                Do not retaliate. If you feel unsafe,
+                                call 112.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CHATBOT
+        ====================================================== -->
+
+        <section
+            id="chatbot"
+            class="section chatbot-section"
+        >
+
+            <div class="container">
+
+                <div class="chatbot-wrapper">
+
+                    <div class="chatbot-info">
+
+                        <span class="section-label">
+                            TARINI ASSIST
+                        </span>
+
+                        <h2>
+                            Have a question?
+                        </h2>
+
+                        <p>
+                            Ask Tarini what you should do next.
+                            You can describe your situation in your
+                            own words.
+                        </p>
+
+                        <div class="chatbot-note">
+                            Tarini provides general guidance. For
+                            immediate danger, contact emergency
+                            services.
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-box">
+
+                        <div class="chat-header">
+
+                            <div class="chat-profile">
+
+                                <div class="chat-avatar">
+                                    T
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Tarini
+                                    </strong>
+
+                                    <span>
+                                        Cyber safety assistant
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <span class="online-dot"></span>
+
+                        </div>
+
+
+                        <div
+                            id="chatMessages"
+                            class="chat-messages"
+                        >
+
+                            <div class="message bot-message">
+
+                                <div class="message-avatar">
+                                    T
+                                </div>
+
+                                <div class="message-bubble">
+                                    Hi. Tell me what happened and
+                                    I'll help you understand the
+                                    next steps.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="chat-input-area">
+
+                            <input
+                                type="text"
+                                id="chatInput"
+                                placeholder="Type your question..."
+                                autocomplete="off"
+                            >
+
+                            <button
+                                type="button"
+                                onclick="sendMessage()"
+                            >
+                                Send
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LEARN & STAY SAFE
+        ====================================================== -->
+
+        <section
+            id="learn"
+            class="section learn-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        LEARN & STAY SAFE
+                    </span>
+
+                    <h2>
+                        Know what these situations mean.
+                    </h2>
+
+                </div>
+
+
+                <div class="learn-grid">
+
+
+                    <article class="learn-card">
+
+                        <span class="learn-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Image Abuse
+                        </h3>
+
+                        <p>
+                            Morphed, edited, AI-generated or private
+                            images being shared without consent.
+                        </p>
+
+                    </article>
+
+
+                    <article class="learn-card">
+
+                        <span class="learn-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Online Blackmail
+                        </h3>
+
+                        <p>
+                            Threats to release photos, videos or
+                            personal information unless you do
+                            something.
+                        </p>
+
+                    </article>
+
+
+                    <article class="learn-card">
+
+                        <span class="learn-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Fake Profiles
+                        </h3>
+
+                        <p>
+                            Someone impersonating you using your
+                            name, photos or personal details.
+                        </p>
+
+                    </article>
+
+
+                    <article class="learn-card">
+
+                        <span class="learn-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Cyber Harassment
+                        </h3>
+
+                        <p>
+                            Repeated unwanted messages, threats,
+                            stalking, abuse or intimidation online.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             REPORT
+        ====================================================== -->
+
+        <section
+            id="report"
+            class="report-section"
+        >
+
+            <div class="container">
+
+                <div class="report-box">
+
+                    <div>
+
+                        <span class="section-label red-label">
+                            OFFICIAL REPORTING
+                        </span>
+
+                        <h2>
+                            Ready to report it?
+                        </h2>
+
+                        <p>
+                            You can report cybercrime through the
+                            official National Cyber Crime Reporting
+                            Portal.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.cybercrime.gov.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="report-button"
+                    >
+                        Report Cybercrime →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <div class="footer-logo">
+                    Tarini
+                </div>
+
+                <p>
+                    A safer first step for women facing cyber
+                    safety problems.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#find-help">
+                    Find Help
+                </a>
+
+                <a href="#emergency">
+                    Emergency
+                </a>
+
+                <a href="#situations">
+                    Safety Guide
+                </a>
+
+                <a href="#chatbot">
+                    Chatbot
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Leaflet Map JS -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
+
+
+    <!-- Main JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
